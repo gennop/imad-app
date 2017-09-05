@@ -4,5 +4,5 @@ console.log('Loaded!');
 //move the image
 var img=document.getElementById('madi');
 function func(img){
-    img.style.marginleft='100px';
+    img.style.height='1000px';
 }
