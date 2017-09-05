@@ -13,6 +13,12 @@ app.get('/comunication.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'communication.html'));
 });
 
+app.get('/articleone.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+});
+app.get('/abhishek1.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'abhishek1.html'));
+});
 app.get('/article-one',function(req,res){
     res.send('Hii...Sahil Sinha...');
 });
