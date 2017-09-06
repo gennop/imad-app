@@ -20,7 +20,7 @@ app.get('/abhishek1.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'abhishek1.html'));
 });
 app.get('/article-one',function(req,res){
-    res.send('Hii...Yogendra Shukla...');
+    res.send('Hii...Yogendra Shukla...What are u doing bro.');
 });
 app.get('/article-two',function(req,res){
     res.send('Article two requested and will be served here');
