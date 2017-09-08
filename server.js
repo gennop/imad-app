@@ -8,14 +8,74 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var content={
+    title:"Communication Skills",
+    date:"8 Sep 2017",
+    heading:"Article-One",
+    content:` <p>
+                Hii...Everyone.
+            </p>
+            <p>
+                The foremost quality you need to develop for minimizing barriers in communication is empathy. 
+                Empathy is different from sympathy.
+            </p>
+            <p>
+                If you see a beggar, who is shivering from cold or starving without money to eat food, and you offer him a woolen blanket or give him some money, you feel sympathy for the beggar. However, empathy is not feeling for, but feeling into.
+            </p>`
+};
+
+
+function createTemplate(data){
+        var title=data.title;
+        var date = data.date;
+        var content= data.content;
+        var heading=data.heading;  
+         
+
+        var htmlTemplate=` <!doctype html>
+        <head>
+            <title>
+               ${title}
+            </title>
+            <style>
+                <link href="ui/style.css" rel="stylesheet"/>
+            </style>
+            <meta name="viewport" content="width=device-width, initial scale-1"/>
+        </head>
+            <body>
+                <div class="changing">
+                    <div>
+                        <a href="/">Home</a>
+                    </div>
+                    <br/>
+                    <h3>
+                        ${heading}
+                    </h3>
+                    <div>
+                        ${date}
+                    </div>
+                        ${content}
+                    </div>
+            </body>
+            
+        </html>`
+        ;
+        return htmlTemplate;
+}
+
+    
+
+
+
+
 //my file
 
 app.get('/articleone', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
 });
-
 app.get('/communication', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'communication.html'));
+  res.send(createTemplate(communication));
 });
 
 app.get('/style.css', function (req, res) {
