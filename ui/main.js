@@ -3,6 +3,6 @@ console.log('Loaded!');
 //element=innerHTML('Hello Abhishek.Whats up.');
 //move the imageC
 var img=document.getElementById("madi");
-img.onClick=function(){
-    img.style.marginleft="100px";
+img.onclick=function(){
+    img.style.marginleft='100px';
 };
