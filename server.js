@@ -8,6 +8,9 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/index1', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index1.html'));
+});
 
 var communication={
     title:"Communication Skills",
