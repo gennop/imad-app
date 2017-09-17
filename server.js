@@ -9,7 +9,7 @@ var Pool=require('pg'.pool);
      database: 'srivastabhishek786',
      host: 'db.imad.hasura-app.io',
      port:'5432',
-     password:process.env. DB_PASSWORD
+     password:process.env.DB_PASSWORD
  };
 
 var app = express();
@@ -44,7 +44,7 @@ app.get('/index1', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index1.html'));
 });
 
-var communication={
+/*var communication={
     title:"Communication Skills",
     date:"8 Sep 2017",
     heading:"Article-One",
@@ -124,8 +124,7 @@ app.get('/article-two',function(req,res){
 
 app.get('/article-three',function(req,res){
     res.send('Article three requested and will be served here');
-});
-
+});*/
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
