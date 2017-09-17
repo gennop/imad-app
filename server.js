@@ -9,7 +9,7 @@ var Pool=require('pg'.pool);
      database: 'srivastabhishek786',
      host: 'db.imad.hasura-app.io',
      port:'5432',
-     password:process.env.DB_PASSWORD
+     password: process.env.DB_PASSWORD
  };
 
 var app = express();
@@ -34,11 +34,6 @@ app.get('/test-db', function(req,res){
         res.send(JSON.stringify(result)); 
        } 
     });
-});
-
-
-app.get('/index1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index1.html'));
 });
 
 app.get('/style.css', function (req, res) {
