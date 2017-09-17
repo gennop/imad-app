@@ -2,6 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var app = express();
+app.use(morgan('combined'));
+
 var Pool=require('pg'.pool);
 
  var config = {
@@ -12,15 +15,13 @@ var Pool=require('pg'.pool);
      password: process.env.DB_PASSWORD
  };
 
-var app = express();
-app.use(morgan('combined'));
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/first', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'first.html'));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 var pool=new Pool(config);
 
 app.get('/test-db', function(req,res){
