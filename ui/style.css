@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
+    margin-top: 75px;
 }
 
 .center {
@@ -18,13 +19,3 @@ body {
 .img-medium {
     height: 200px;
 }
-.changing{
-    
-            width:800px;
-            margin:0 auto;
-            color :grey;
-            font-family:sans-serif;
-            padding-top:20px;
-}
-
-
