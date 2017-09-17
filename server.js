@@ -17,7 +17,7 @@
    res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
   });
   
-  +var port = 80;
- +app.listen(port, function () {
+ var port = 80;
+ app.listen(port, function () {
     console.log(`IMAD course app listening on port ${port}!`);
   });
